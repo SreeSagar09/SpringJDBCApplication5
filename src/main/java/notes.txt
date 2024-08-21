@@ -1,0 +1,24 @@
+A program to demonstrate how to get multiple records from db by using queryForList method:
+Programs:
+* Employee.java
+* AppConfig.java
+* Test.java
+Note:
+* queryForList method is used to get multiple rows with multiple columns or multiple rows with single column.
+* queryForList(String sql) method used to execute static query and return List of Map Object with required column values, it accept single argument is sql query.
+* queryForList(String sql, Class<T> elementType) method used to execute static query and return List of required column value, it accept two arguments first one is sql query and second one is required return type class.
+* queryForList(String sql, @Nullable Object... args) method used to execute dynamic query and return List of Map Object with required column values, it accept two arguments first one is sql query and second one is object arguments of input parameter values of query.
+* queryForList(String sql, Class<T> elementType, @Nullable Object... args) method used to execute dynamic query and return List of required column value, it accept three arguments first one is sql query, second one is required return type class and third one is object arguments of input parameter values of query.
+* queryForList(String sql, @Nullable Object[] args, Class<T> elementType) method used to execute dynamic query and return List of required column value, it accept three arguments first one is sql query, second one is object array of input parameters values and third one is required return type class.
+* queryForList(String sql, Object[] args, int[] argTypes) method used to execute dynamic query and return List of Map Object with required column values, it accept three arguments first one is sql query, second one is object array of input parameters values and third one is input parameters types in int array.
+* queryForList(String sql, Object[] args, int[] argTypes, Class<T> elementType) method used to execute dynamic query and return List of required column value, it accept four arguments first one is sql query, second one is object array of input parameters values, third one is input parameters types in int array and fourth one is required return type class.
+* If executed query return 0 row then above all methods return empty list.
+Output:
+[{employee_id=1, employee_code=A001, employee_name=Sree Sagar, age=30, designation=Software Engineer}]
+[Sree Sagar, Sathish, Pavan, Aravind, Pavan]
+[{employee_name=Sree Sagar}, {employee_name=Pavan}, {employee_name=Aravind}, {employee_name=Pavan}]
+[A002]
+[Pavan, Pavan]
+[{employee_name=Sree Sagar, employee_code=A001}, {employee_name=Sathish, employee_code=A002}]
+[A004]
+

@@ -1,0 +1,1 @@
+A program to demonstrate how to get multiple records from db by using queryForList method:
